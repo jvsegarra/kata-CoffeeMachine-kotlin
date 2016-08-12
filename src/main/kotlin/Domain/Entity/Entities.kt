@@ -5,10 +5,10 @@ class Drink(val code: Char)
 
 
 //-------- Order
-class Order(val drink: Drink, val sugarQuantity: Int) {
+class Order(val drink: Drink, val sugarQuantity: Int, val price: Float) {
     val sticks: Int = 0
 
     fun toCommandString(): String {
-        return "${this.drink.code}:${this.sugarQuantity}:${this.sticks}"
+        return "${this.drink.code}:${this.sugarQuantity}:${this.sticks}:${this.price}"
     }
 }
