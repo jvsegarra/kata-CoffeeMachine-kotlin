@@ -1,10 +1,11 @@
 package Infrastructure
 
 import Domain.DrinkMaker
+import Domain.DrinkRepository
 import Domain.DrinkSymbols
 import Factory.createOrderFromCommand
 
-class CoffeeMachineDrinkMaker : DrinkMaker {
+class CoffeeMachineDrinkMaker(val drinkRepository: DrinkRepository) : DrinkMaker {
     override fun makeDrink(command: String): String {
         val order = createOrderFromCommand(command)
         val priceDifference = order.price - DrinkSymbols.currentPriceForDrink(order.drink.code)
