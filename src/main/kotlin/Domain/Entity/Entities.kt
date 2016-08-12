@@ -1,7 +1,7 @@
 package Domain.Entity
 
 //-------- Drink
-class Drink(val code: Char)
+class Drink(val code: String)
 
 
 //-------- Order
