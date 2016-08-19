@@ -1,10 +1,11 @@
 package Domain
 
-import Domain.Entity.Order
+import Domain.Entity.Drink
 
 interface DrinkRepository {
-    var ordersList: List<Order>
+    var drinksList: MutableList<Drink>
 
+    fun addDrink(drink: Drink)
     fun drinksSold(): String
     fun moneyEarned(): String
 }
